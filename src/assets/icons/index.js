@@ -8,7 +8,7 @@ import instagram from './instagram.svg'
 import support from './support.svg'
 import shieldTick from './shield-tick.svg'
 import star from './star.svg'
-import truckFast from './truck-fast.svg'
+import truckFast from './truckFast.svg'
 import twitter from './twitter.svg'
 
 export {
