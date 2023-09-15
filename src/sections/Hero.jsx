@@ -7,12 +7,17 @@ import ShoeCard from "../components/ShoeCard"
 
 const Hero = () => {
   const [bigShoeImg,setBigShoeImg] = useState(bigShoe1)
+
   return (
-    <section id="home" className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container border to-black">
+    <section id="home" className="w-full flex xl:flex-row flex-col justify-center  gap-10 max-container" 
+    // style={{border: '2px solid black'}}
+    >
 
-      <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
+      <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 " 
+      // style={{border: '2px solid green'}}
+      >
 
-        <p className="text-xl font-montserrat text-coral-red border">Our Summer Collection</p>
+        <p className="text-xl font-montserrat text-coral-red ">Our Summer Collection</p>
 
         <h1 
           className="
@@ -20,7 +25,7 @@ const Hero = () => {
           max-sm:text-[72px] 
           max-sm:leading-[82] 
           font-bold
-          border red
+         
           "
         >
 
@@ -35,7 +40,7 @@ const Hero = () => {
         Shoes
         </h1>
 
-        <p className="font-monserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm border text-coral-red">
+        <p className="font-monserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm ">
           Discover stylish Nike arrivals,quality comfort, and innovation for your active life
         </p>
 
@@ -52,7 +57,9 @@ const Hero = () => {
 
       </div>
 
-      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
+      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center" 
+      // style={{border: '2px solid green'}}
+      >
         <img src={bigShoeImg} alt="shoe collection" width={610} height={500} className="object-contain"/>
         <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
           {shoes.map((shoe) => (
@@ -60,16 +67,13 @@ const Hero = () => {
               <ShoeCard
                 imgURL={shoe}
                 changeBigShoeImage={(shoe) => {setBigShoeImg(shoe)}}
-                bigShoeImage={bigShoeImg}
-               
+                bigShoeImage={bigShoeImg}   
               />
             </div>
           ))}
         </div>
       </div>
       
-
-
     </section>
   )
 }
